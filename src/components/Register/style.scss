@@ -1,0 +1,24 @@
+.container-register-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .red {
+        color: red;
+        margin: 0;
+    }
+
+    form {
+        .row {
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+
+            input {
+                margin: 0;
+            }
+
+        }
+    }
+}
