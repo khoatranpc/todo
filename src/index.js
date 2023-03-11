@@ -7,6 +7,7 @@ import { MainLayout } from './components/layouts/main';
 import Login from './components/Login';
 import LayoutAuth from './components/layouts/auth';
 import Register from './components/Register';
+import { AuthProtect } from './components/AuthProtect';
 import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -14,10 +15,10 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<MainLayout />} >
+        <Route path='/' element={<AuthProtect><MainLayout /></AuthProtect>} >
           <Route path='home' element={<App />} />
         </Route>
-        <Route path='/auth' element={<LayoutAuth />}>
+        <Route path='/auth' element={<AuthProtect><LayoutAuth /></AuthProtect>}>
           <Route path='login' element={<Login />}></Route>
           <Route path='register' element={<Register />}></Route>
         </Route>
